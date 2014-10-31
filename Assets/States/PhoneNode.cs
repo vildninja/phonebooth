@@ -12,18 +12,22 @@ public class PhoneNode : MonoBehaviour {
     public Answer[] answers;
     public PhoneNode[] next;
 
-    [HideInInspector]
+//    [HideInInspector]
     public State answer = State.NONE;
 
     public enum State
     {
-        NONE,
-        HUNGUP,
+        NONE,        
         PLAYED,
-        TRUE,
-        FALSE,
+		HUNGUP,
+
+		TRUE,
+		FALSE,
+
         CONFIRMED,
-        DENIED,
+        DECLINED,
+
+		DENIED,
     }
 
     [System.Serializable]
@@ -97,7 +101,7 @@ public class PhoneNode : MonoBehaviour {
     IEnumerator Play()
     {
         yield return null;
-        isCurrentlyPlaying = true;
+        isCurrentlyPlaying = true; // for visialization
 
         if (audio)
         {

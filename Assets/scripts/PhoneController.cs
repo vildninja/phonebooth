@@ -10,20 +10,25 @@ public class PhoneController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {	
-		var p = FindObjectsOfType<PhoneNode> ();
 
-		for (int i = 0; i < p.Length; i++) {
-			PhoneNode pn = p[i];
+		phonebook = new Dictionary<string, PhoneNode> ();
 
+		var pns = FindObjectsOfType<PhoneNode> ();
+		for (int i = 0; i < pns.Length; i++) {
+			PhoneNode pn = pns[i];
 			phonebook[pn.phoneNumber] = pn;			
 		}
+
+//		Debug.Log (ps.Length);
 	}
 	
 	void TryMatchNumber (string phoneNr)
 	{
 		if (phonebook.ContainsKey (phoneNr)) {
-			Debug.Log("omg: called " + phonebook[phoneNr] );
-			// do something
+			Debug.Log("omg: calling " + phonebook[phoneNr] );
+
+			PhoneNode pn =  phonebook[phoneNr]; 
+			pn.Activate();
 			Reset ();
 		}
 		else {
@@ -37,7 +42,6 @@ public class PhoneController : MonoBehaviour {
 
 	void Reset() {
 		phoneNr = ""; // clear phone number
-
 	}
 
 	public void OnButtonPress(int value) {
