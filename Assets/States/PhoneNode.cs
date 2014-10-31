@@ -31,7 +31,7 @@ public class PhoneNode : MonoBehaviour {
         public string text;
     }
 
-    public bool Activate(string current)
+    public bool Activate(string current = "")
     {
         bool activate = false;
 
@@ -52,7 +52,19 @@ public class PhoneNode : MonoBehaviour {
                 foreach (var o in ors)
                 {
                     string c = current;
-                    var tokens = o.Split('-');
+                    bool neg = false;
+
+                    string[] tokens;
+                    if (o.StartsWith("!"))
+                    {
+                        tokens = o.Substring(1).Split('-');
+                        neg = true;
+                    }
+                    else
+                    {
+                        tokens = o.Split('-');
+                    }
+
                     if (tokens.Length > 1)
                         c = tokens[1];
 
@@ -63,6 +75,9 @@ public class PhoneNode : MonoBehaviour {
                         t = true;
                         break;
                     }
+
+                    if (neg)
+                        t = !t;
                 }
                 if (!t)
                 {
@@ -80,11 +95,19 @@ public class PhoneNode : MonoBehaviour {
     IEnumerator Play()
     {
         yield return null;
+        isCurrentlyPlaying = true;
 
         if (audio)
         {
             audio.Play();
-            yield return new WaitForSeconds(audio.clip.length);
+            while (audio.isPlaying)
+                yield return new WaitForSeconds(.2f);
+        }
+
+        if (answer == State.HUNGUP)
+        {
+            isCurrentlyPlaying = false;
+            yield break;
         }
 
         if (answers.Length > 0)
@@ -92,21 +115,32 @@ public class PhoneNode : MonoBehaviour {
             FindObjectOfType<AnswerInput>().Initialize(this);
 
             while (answer == State.NONE)
-                yield return null;
+                yield return new WaitForSeconds(.2f);
 
-            saved.Add(name, answer);
+            if (saved.ContainsKey(name))
+                saved[name] = answer;
+            else
+                saved.Add(name, answer);
 
             if (answer == State.HUNGUP)
+            {
+                isCurrentlyPlaying = false;
                 yield break;
+            }
         }
         else
         {
-            saved.Add(name, State.PLAYED);
+            if (saved.ContainsKey(name))
+                saved[name] = State.PLAYED;
+            else
+                saved.Add(name, State.PLAYED);
         }
 
-        foreach (var n in next)
-            if (n.Activate(name))
-                break;
+        if (next != null)
+            foreach (var n in next)
+                if (n.Activate(name))
+                    break;
+        isCurrentlyPlaying = false;
     }
 
     public void HangUp()
@@ -117,4 +151,64 @@ public class PhoneNode : MonoBehaviour {
         answer = State.HUNGUP;
     }
 
+    bool isCurrentlyPlaying;
+    void OnDrawGizmos()
+    {
+
+        if (!VerifySpelling())
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(transform.position, 0.3f);
+        }
+
+
+        if (isCurrentlyPlaying)
+            Gizmos.color = Color.green;
+        else
+            Gizmos.color = Color.white;
+            
+            
+        Gizmos.DrawSphere(transform.position, 0.2f);
+
+
+        if (next != null)
+            foreach (var pn in next)
+                Gizmos.DrawLine(transform.position, pn.transform.position);
+    }
+
+    bool VerifySpelling()
+    {
+        if (string.IsNullOrEmpty(statement))
+            return true;
+
+        var tokens = statement.Split('&', '|');
+
+        foreach (var token in tokens)
+        {
+            string[] split;
+            if (token.StartsWith("!"))
+            {
+                split = token.Substring(1).Split('-');
+            }
+            else
+            {
+                split = token.Split('-');
+            }
+
+            try
+            {
+                System.Enum.Parse(typeof(State), split[0]);
+            }
+            catch
+            {
+                return false;
+            }
+            if (split.Length == 2)
+            {
+                if (!GameObject.Find(split[1]))
+                    return false;
+            }
+        }
+        return true;
+    }
 }
