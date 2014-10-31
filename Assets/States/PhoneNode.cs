@@ -6,6 +6,8 @@ public class PhoneNode : MonoBehaviour {
 
     public static Dictionary<string, State> saved = new Dictionary<string, State>();
 
+    public string phoneNumber = "";
+
     public string statement;
     public Answer[] answers;
     public PhoneNode[] next;
