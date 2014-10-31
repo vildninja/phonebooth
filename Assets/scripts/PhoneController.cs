@@ -14,6 +14,8 @@ public class PhoneController : MonoBehaviour {
 
 		for (int i = 0; i < p.Length; i++) {
 			PhoneNode pn = p[i];
+
+			phonebook[pn.phoneNumber] = pn;			
 		}
 	}
 	
