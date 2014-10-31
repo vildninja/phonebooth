@@ -24,10 +24,10 @@ public class PhoneController : MonoBehaviour {
 	
 	void TryMatchNumber (string phoneNr)
 	{
-		if (phonebook.ContainsKey (phoneNr)) {
+		if (phoneNr.Length > 0 && phonebook.ContainsKey (phoneNr)) {
 			Debug.Log("omg: calling " + phonebook[phoneNr] );
 
-			PhoneNode pn =  phonebook[phoneNr]; 
+			PhoneNode pn = phonebook[phoneNr]; 
 			pn.Activate();
 			Reset ();
 		}
@@ -54,6 +54,14 @@ public class PhoneController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (Input.GetKeyDown (KeyCode.Alpha1)) {
+			OnButtonPress(1);
+		}
+		else if (Input.GetKeyDown (KeyCode.Alpha2)) {
+			OnButtonPress(2);
+		}
+		else if (Input.GetKeyDown (KeyCode.Alpha3)) {
+			OnButtonPress(3);
+		}
 	}
 }
