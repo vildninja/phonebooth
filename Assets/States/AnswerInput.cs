@@ -20,6 +20,8 @@ public class AnswerInput : MonoBehaviour {
         {
             var b = Instantiate(buttonPrefab, buttonPositions[i].position, buttonPositions[i].rotation) as AnswerInputButton;
             buttons.Add(b);
+            b.state = node.answers[i].state;
+            b.text = node.answers[i].text;
         }
     }
 
