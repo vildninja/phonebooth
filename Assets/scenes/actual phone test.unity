@@ -103,12 +103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneNumber: 
-  statement: CONFIRMED-NB_start
-  answers:
-  - state: 1
-    text: 
-  - state: 1
-    text: 
+  statement: CONFIRMED
+  answers: []
   next:
   - {fileID: 129459566}
   answer: 0
@@ -132,7 +128,7 @@ AudioSource:
   m_GameObject: {fileID: 26680178}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 47a5ac8fa6486d744a15ed7fd81705f2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e1d06701048c2458eb1cefbdfe458416, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -211,10 +207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneNumber: 123
-  statement: PLAYED-p1
-  answers:
-  - state: 1
-    text: 
+  statement: 
+  answers: []
   next:
   - {fileID: 213966050}
   answer: 0
@@ -238,7 +232,7 @@ AudioSource:
   m_GameObject: {fileID: 129459565}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: a2fbfcf12867c0745b0342a793cb9fa3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ae9a59c58498b44758e0ba54c88187b1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -516,7 +510,7 @@ AudioSource:
   m_GameObject: {fileID: 213966049}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 47a5ac8fa6486d744a15ed7fd81705f2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 03571c4d910744c8db0878a37bd7682a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1177,7 +1171,7 @@ AudioSource:
   m_GameObject: {fileID: 537513078}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: a2fbfcf12867c0745b0342a793cb9fa3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6d0d0dff563384260928cddfc891593c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1820,7 +1814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneNumber: 123
-  statement: CONFIRMED-n1
+  statement: CONFIRMED
   answers: []
   next: []
   answer: 0
@@ -1844,7 +1838,7 @@ AudioSource:
   m_GameObject: {fileID: 1236867228}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: a2fbfcf12867c0745b0342a793cb9fa3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d91c3c6fbf0a24fc59b2ff7b4f809cac, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2574,7 +2568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneNumber: 
-  statement: DECLINED-NB_start
+  statement: DECLINED
   answers:
   - state: 5
     text: 
@@ -2604,7 +2598,7 @@ AudioSource:
   m_GameObject: {fileID: 1899613555}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 850bb9eeeb0bd6a4aa679c18c354b159, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8836666d29df74caa9a1e5528af051c8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2711,7 +2705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneNumber: 123
-  statement: DECLINED-n1
+  statement: DECLINED
   answers: []
   next: []
   answer: 0
@@ -2735,7 +2729,7 @@ AudioSource:
   m_GameObject: {fileID: 1984486653}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 47a5ac8fa6486d744a15ed7fd81705f2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 205014175b15e4aa4a06d2c7b951f384, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
