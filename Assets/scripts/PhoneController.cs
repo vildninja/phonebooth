@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class PhoneController : MonoBehaviour {
 
-	public string phoneNr; 
+	private string phoneNumberToCall; 
 
 	static Dictionary <string, PhoneNode> phonebook;
 
@@ -41,14 +41,14 @@ public class PhoneController : MonoBehaviour {
 	}
 
 	void Reset() {
-		phoneNr = ""; // clear phone number
+		phoneNumberToCall = ""; // clear phone number
 	}
 
 	public void OnButtonPress(int value) {
 
-		phoneNr += value.ToString ();
+		phoneNumberToCall += value.ToString ();
 
-		TryMatchNumber (phoneNr);
+		TryMatchNumber (phoneNumberToCall);
 
 	}
 	
