@@ -20,7 +20,7 @@ public class PhoneController : MonoBehaviour {
 		if (phonebook.ContainsKey (phoneNr)) {
 			Debug.Log("omg: called " + phonebook[phoneNr] );
 			// do something
-			phoneNr.Length = 0; // clear phone number
+			phoneNr = ""; // clear phone number
 		}
 		else {
 			Debug.Log(phoneNr + " does not exist");
