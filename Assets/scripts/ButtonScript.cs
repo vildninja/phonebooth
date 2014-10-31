@@ -5,6 +5,8 @@ public class ButtonScript : MonoBehaviour {
 
 	public int value = -1;
 
+	public AudioSource buttonSound;
+
 	private TextMesh label;
 	public KeyCode key;
 
@@ -19,18 +21,24 @@ public class ButtonScript : MonoBehaviour {
 		TextMesh label = t[0];
 		this.label = label;
 		this.label.text = value.ToString();
-
 	}
 
+
 	public void activate() {
+		PlayButtonSound ();
+
 		phone.OnButtonPress (value);	
 	}
 
+	void PlayButtonSound ()
+	{
+		buttonSound.Play ();
+	}
 
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyUp(key)) {
+		if (Input.GetKeyDown(key)) {
 			activate();
 		}
 	}

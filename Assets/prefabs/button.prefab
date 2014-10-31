@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .299845934, y: .499999851, z: -.270372987}
+  m_LocalPosition: {x: -.0186541211, y: .49999994, z: -.270373017}
   m_LocalScale: {x: .183763504, y: .183763564, z: .183763564}
   m_Children:
   - {fileID: 400002}
@@ -152,8 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb4c298be2b6f408ca92e6c63e7c5f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 2
-  key: 0
+  value: 1
+  buttonSound: {fileID: 0}
+  key: 49
   phone: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
