@@ -144,7 +144,6 @@ GameObject:
   - 92: {fileID: 70128725}
   - 124: {fileID: 70128724}
   - 81: {fileID: 70128723}
-  - 114: {fileID: 70128722}
   - 95: {fileID: 70128721}
   - 114: {fileID: 70128728}
   m_Layer: 0
@@ -161,7 +160,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 70128720}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5071e0e4c61a1bb4db0ae65e79e4651d, type: 2}
   m_CullingMode: 0
@@ -169,18 +168,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &70128722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 70128720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 377022b663389b64ea2ec9c7aa62d14c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  init: {fileID: 0}
 --- !u!81 &70128723
 AudioListener:
   m_ObjectHideFlags: 0
@@ -245,14 +232,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!114 &70128728
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 70128720}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8fe4fd29cc3840309c18766ff0b0e1f, type: 3}
   m_Name: 
@@ -363,7 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneNumber: 
-  statement: CONFIRMED
+  statement: DECLINED
   answers: []
   next:
   - {fileID: 1712300269}
@@ -833,7 +820,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!95 &322390187
 Animator:
   serializedVersion: 3
@@ -972,7 +959,7 @@ Animator:
     type: 3}
   m_PrefabInternal: {fileID: 555683634}
   m_GameObject: {fileID: 388106541}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f748ebc7d0ff1b94184fd7d0b46bde3b, type: 3}
   m_Controller: {fileID: 9100000, guid: f853202987970cc438a37b8294ec500c, type: 2}
   m_CullingMode: 1
@@ -1123,7 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d695fc487a9d78949a714d2f8e142f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phoneNumber: 123
+  phoneNumber: 
   statement: CONFIRMED
   answers: []
   next: []
@@ -1287,9 +1274,9 @@ MonoBehaviour:
   phoneNumber: 222
   statement: 
   answers:
-  - state: 1
-    text: 
   - state: 5
+    text: 
+  - state: 6
     text: 
   next:
   - {fileID: 103087825}
@@ -1408,7 +1395,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: f853202987970cc438a37b8294ec500c, type: 2}
     - target: {fileID: 9500000, guid: f748ebc7d0ff1b94184fd7d0b46bde3b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f748ebc7d0ff1b94184fd7d0b46bde3b, type: 3}
@@ -1535,33 +1522,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &642334154
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 642334155}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &642334155
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 642334154}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
 --- !u!1 &672308985
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,7 +2519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d695fc487a9d78949a714d2f8e142f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phoneNumber: 123
+  phoneNumber: 
   statement: CONFIRMED|DECLINED
   answers: []
   next:
@@ -3187,7 +3147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d695fc487a9d78949a714d2f8e142f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phoneNumber: 123
+  phoneNumber: 
   statement: DECLINED
   answers: []
   next: []
@@ -3350,7 +3310,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phoneNumber: 
   statement: DECLINED
-  answers: []
+  answers:
+  - state: 6
+    text: 
+  - state: 5
+    text: 
   next:
   - {fileID: 165601972}
   - {fileID: 1730371936}
@@ -3546,7 +3510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneNumber: 
-  statement: DECLINED
+  statement: DECLINED|CONFIRMED
   answers: []
   next: []
   answer: 0
@@ -3632,7 +3596,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1822738222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .683596134, y: -.716673851, z: 0}
+  m_LocalPosition: {x: .595094681, y: -.760925293, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1323299135}
@@ -3649,8 +3613,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneNumber: 
-  statement: DECLINED
-  answers: []
+  statement: CONFIRMED
+  answers:
+  - state: 5
+    text: 
+  - state: 6
+    text: 
   next:
   - {fileID: 1730371936}
   - {fileID: 1804822927}
@@ -3861,7 +3829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d695fc487a9d78949a714d2f8e142f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phoneNumber: 123
+  phoneNumber: 
   statement: CONFIRMED|DECLINED
   answers: []
   next: []
@@ -3978,7 +3946,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phoneNumber: 
   statement: CONFIRMED
-  answers: []
+  answers:
+  - state: 0
+    text: 
+  - state: 0
+    text: 
   next:
   - {fileID: 2125325166}
   - {fileID: 414843432}
