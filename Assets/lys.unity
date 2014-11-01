@@ -198,7 +198,7 @@ Animator:
   m_GameObject: {fileID: 55461451}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f748ebc7d0ff1b94184fd7d0b46bde3b, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f853202987970cc438a37b8294ec500c, type: 2}
   m_CullingMode: 1
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
@@ -2186,6 +2186,7 @@ GameObject:
   - 124: {fileID: 1742681703}
   - 81: {fileID: 1742681702}
   - 114: {fileID: 1742681707}
+  - 95: {fileID: 1742681708}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2250,7 +2251,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1742681701}
   m_LocalRotation: {x: .00184316305, y: .973326385, z: -.229284093, w: -.00782435387}
-  m_LocalPosition: {x: 0, y: 14.2853737, z: 1.33120298}
+  m_LocalPosition: {x: 0, y: 14.2853737, z: 1.47006273}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2266,6 +2267,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   init: {fileID: 501252025}
+--- !u!95 &1742681708
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742681701}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5071e0e4c61a1bb4db0ae65e79e4651d, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!1 &1787567783
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,6 +2458,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5e5d0abf73a73864b94d2ff87f2314e3, type: 2}
+    - target: {fileID: 9500000, guid: f748ebc7d0ff1b94184fd7d0b46bde3b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f853202987970cc438a37b8294ec500c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f748ebc7d0ff1b94184fd7d0b46bde3b, type: 3}
   m_RootGameObject: {fileID: 55461451}
