@@ -8,6 +8,9 @@ public class AnswerInput : MonoBehaviour {
 
     public Transform[] buttonPositions;
 
+    public Texture green;
+    public Texture red;
+
     List<AnswerInputButton> buttons = new List<AnswerInputButton>();
 
     PhoneNode node;
@@ -22,6 +25,17 @@ public class AnswerInput : MonoBehaviour {
             buttons.Add(b);
             b.state = node.answers[i].state;
             b.text = node.answers[i].text;
+
+            switch (b.state)
+            {
+                case PhoneNode.State.CONFIRMED:
+                    b.renderer.material.mainTexture = green;
+                    break;
+                case PhoneNode.State.DECLINED:
+                    b.renderer.material.mainTexture = red;
+                    break;
+            }
+
         }
     }
 
