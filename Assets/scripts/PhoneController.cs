@@ -80,7 +80,7 @@ public class PhoneController : MonoBehaviour {
 			OnButtonPress(9);
 		}
 		else if (Input.GetKeyDown (KeyCode.Alpha0)) {
-			OnButtonPress(0);
+			HangUp();
 		}
 	}
 }
