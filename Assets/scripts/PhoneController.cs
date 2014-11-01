@@ -79,7 +79,7 @@ public class PhoneController : MonoBehaviour {
 		else if (Input.GetKeyDown (KeyCode.Alpha9)) {
 			OnButtonPress(9);
 		}
-		else if (Input.GetKeyDown (KeyCode.Alpha0)) {
+		else if (Input.GetKeyDown (KeyCode.Alpha0) || Input.GetKeyDown(KeyCode.Space)) {
 			HangUp();
 		}
 	}
