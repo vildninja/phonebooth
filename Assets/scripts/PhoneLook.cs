@@ -7,6 +7,8 @@ public class PhoneLook : MonoBehaviour {
     public float horizontal;
     public float vertical;
 
+	public bool active = true;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -18,7 +20,7 @@ public class PhoneLook : MonoBehaviour {
 	void Update ()
     {
         //Debug.Log(Input.mousePosition.x + " / " + Screen.width + " = " + (Input.mousePosition.x / Screen.width) + " -> " + (curve.Evaluate(Input.mousePosition.x / Screen.width) * horizontal));
-
+		if (active)
         transform.rotation = Quaternion.Euler(curve.Evaluate(Input.mousePosition.y / Screen.height) * vertical, curve.Evaluate(Input.mousePosition.x / Screen.width) * horizontal, 0);
 	}
 }
