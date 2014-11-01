@@ -20,7 +20,7 @@ public class SimpleSmoothMouseLook : MonoBehaviour
 	// Assign this if there's a parent object controlling motion, such as a Character Controller.
 	// Yaw rotation will affect this object instead of the camera if set.
 	public GameObject characterBody;
-	
+
 	void Start()
 	{
 		// Set target direction to the camera's initial orientation.
