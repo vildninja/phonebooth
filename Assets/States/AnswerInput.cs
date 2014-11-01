@@ -31,7 +31,7 @@ public class AnswerInput : MonoBehaviour {
                 case PhoneNode.State.CONFIRMED:
                     b.renderer.material.mainTexture = green;
                     break;
-                case PhoneNode.State.DENIED:
+                case PhoneNode.State.DECLINED:
                     b.renderer.material.mainTexture = red;
                     break;
             }

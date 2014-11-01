@@ -26,7 +26,6 @@ public class PhoneController : MonoBehaviour {
 	{
 		if (phoneNr.Length > 0 && phonebook.ContainsKey (phoneNr)) {
 			Debug.Log("omg: calling " + phonebook[phoneNr] );
-
 			PhoneNode pn = phonebook[phoneNr]; 
 			pn.Activate();
 			Reset ();
@@ -52,7 +51,6 @@ public class PhoneController : MonoBehaviour {
 
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Alpha1)) {
 			OnButtonPress(1);
@@ -62,6 +60,27 @@ public class PhoneController : MonoBehaviour {
 		}
 		else if (Input.GetKeyDown (KeyCode.Alpha3)) {
 			OnButtonPress(3);
+		}
+		else if (Input.GetKeyDown (KeyCode.Alpha4)) {
+			OnButtonPress(4);
+		}		
+		else if (Input.GetKeyDown (KeyCode.Alpha5)) {
+			OnButtonPress(5);
+		}		
+		else if (Input.GetKeyDown (KeyCode.Alpha6)) {
+			OnButtonPress(6);
+		}
+		else if (Input.GetKeyDown (KeyCode.Alpha7)) {
+			OnButtonPress(7);
+		}		
+		else if (Input.GetKeyDown (KeyCode.Alpha8)) {
+			OnButtonPress(8);
+		}		
+		else if (Input.GetKeyDown (KeyCode.Alpha9)) {
+			OnButtonPress(9);
+		}
+		else if (Input.GetKeyDown (KeyCode.Alpha0)) {
+			HangUp();
 		}
 	}
 }
