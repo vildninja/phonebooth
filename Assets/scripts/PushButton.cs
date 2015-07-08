@@ -5,6 +5,8 @@ public class PushButton : MonoBehaviour {
 
     public int number;
 
+	public AudioSource buttonSound = null;
+
 	// Use this for initialization
 	void Start () {
 	    
@@ -21,6 +23,11 @@ public class PushButton : MonoBehaviour {
                 if (con)
                     con.OnButtonPress(number);
                 StartCoroutine(Press());
+
+				// play sound 
+				if (buttonSound != null) {
+					buttonSound.Play();
+				}
             }
         }
 	}

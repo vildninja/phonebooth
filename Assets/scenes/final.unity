@@ -598,6 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 0
+  buttonSound: {fileID: 0}
 --- !u!65 &88891275
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1103,6 +1104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 3
+  buttonSound: {fileID: 0}
 --- !u!65 &287656049
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1190,6 +1192,92 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1385401257}
   m_GameObject: {fileID: 293728395}
   m_Mesh: {fileID: 4300000, guid: f4990d111d876ed47bacbfa9f792a589, type: 3}
+--- !u!1 &321038610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 321038612}
+  - 82: {fileID: 321038611}
+  m_Layer: 0
+  m_Name: ButtonClickSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &321038611
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 321038610}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: ddbffd706f59941d588f68d38111b6e9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &321038612
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 321038610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .716645837, y: 12.4715042, z: -1.79121077}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
 --- !u!1 &371807471
 GameObject:
   m_ObjectHideFlags: 0
@@ -3326,6 +3414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 7
+  buttonSound: {fileID: 0}
 --- !u!65 &731806738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6341,6 +6430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 8
+  buttonSound: {fileID: 0}
 --- !u!65 &1288629697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6534,6 +6624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 4
+  buttonSound: {fileID: 0}
 --- !u!65 &1293768391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6954,6 +7045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 9
+  buttonSound: {fileID: 0}
 --- !u!65 &1367352387
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8229,6 +8321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 1
+  buttonSound: {fileID: 321038611}
 --- !u!65 &1660207645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10332,6 +10425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 6
+  buttonSound: {fileID: 0}
 --- !u!65 &1953390332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10692,6 +10786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 5
+  buttonSound: {fileID: 0}
 --- !u!65 &2000258239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12188,6 +12283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 2
+  buttonSound: {fileID: 0}
 --- !u!65 &2120747598
 BoxCollider:
   m_ObjectHideFlags: 0
